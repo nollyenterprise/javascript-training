@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Training</title>
+        <style>
+            div.change-color {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                display: inline-block;
+            }
+            div.change-font {
+                color: red;
+            }
+            body {
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <h5>Changing Color</h5>
+        <div class="change-color">
+            
+        </div>
+
+        <hr>
+
+        <h5>Changing Color</h5>
+        <div class="change-font">
+            I have a dream
+        </div>
+
+        <hr>
+
+
+
+
+
+
+        <script>
+
+            console.log(document)
+            // ARRAY
+            const colorVariations = [ "blue", "green", "black", "orange", "violet" ];
+
+            // define an Interval
+            setInterval(() => {
+                let cont1 = document.getElementsByClassName("change-color");
+                let cont2 = document.querySelector(".change-font");
+                cont1.style.backgroundColor = colorVariations[Math.floor(Math.random()*colorVariations.length)];
+                cont2.style.color = colorVariations[Math.floor(Math.random()*colorVariations.length)];
+
+            // Run every 3 seconds 
+            }, 3000);
+            
+        </script>
+        <script src="index.js" />
+    </body>
+</html>
