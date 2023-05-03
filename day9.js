@@ -34,6 +34,7 @@ function MissingDigit (str) {
     for (const i in operator) {
         switch (operator[i]) {
             case calFn:
+                // using cal function find what the variable with x originally should have been 
                 if(calFn == '+'){
                     if(answer.includes('x')){
                         fA = parseFloat(var1) + parseFloat(var2);
@@ -67,6 +68,7 @@ function MissingDigit (str) {
                         fA = parseFloat(answer) / parseFloat(var1);
                     }
                 }
+                // Replace x on the original equation and return as final answer 
                 if(answer.includes('x')){
                     str = answer.length == 1 ? fA : fA.toString()[answer.indexOf('x')];
                 } else if (var1.includes('x')) {
