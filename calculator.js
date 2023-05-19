@@ -46,6 +46,8 @@ const start = () => {
             
             // Logic for Initial Value 
             if(operatorType == ""){
+                if(initialValue.length == 11)
+                    return false;
                 if(initialValue == "0")
                     initialValue = "";
                 if(value == "." && initialValue.includes("."))
@@ -55,6 +57,8 @@ const start = () => {
             
             // Logic for second Value 
             } else {
+                if(secondValue.length == 11)
+                    return false;
                 if(secondValue == "0")
                     secondValue = "";
                 if(value == "." && secondValue.includes("."))
